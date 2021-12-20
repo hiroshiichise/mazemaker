@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAZE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./maze.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="text-center">
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            MAZE MAKER
+        </p>
+        <ul class="list-decimal text-ms leading-8">
+            <li>1. Connect [s] and [f] by dragging</li>
+            <li>2. push [MakeMaze]button!</li>
+            <li>3. you can get MAZE result!!</li>
+        </ul>
+    </div>
+    <div class=" min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+    </div>
+
+    <div class="flex items-center mb-5 justify-center">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="reset()">
+            Reset
+        </button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            onclick="makeMazeAll()">
+            MakeMaze
+        </button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="solveMaze()">
+            Solve
+        </button>
+
+    </div>
+    <div class="flex items-center mb-1 justify-center">
+        <p id="outcome"></p>
+    </div>
+    <script src="maze.js"></script>
+</body>
+
+</html>
