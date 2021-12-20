@@ -26,9 +26,6 @@
     </div>
 
     <div class="flex items-center mb-5 justify-center">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="reset()">
-            Reset
-        </button>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
             onclick="makeMazeAll()">
             MakeMaze
@@ -36,8 +33,17 @@
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="solveMaze()">
             Solve
         </button>
-
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            onclick="clearSolvePath()">
+            Clear Solve Path
+        </button>
     </div>
+    <div class="flex items-center mb-5 justify-center">
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full" onclick="reset()">
+            Reset
+        </button>
+    </div>
+
     <div class="flex items-center mb-1 justify-center">
         <p id="outcome"></p>
     </div>

@@ -100,6 +100,18 @@ function makeMazeAll() {
     breakWall();
 }
 
+function clearSolvePath() {
+    for (var row = 1; row < tileRowCount - 1; row++) {
+        for (var column = 1; column < tileColumnCount - 1; column++) {
+            if (tiles[column][row].state == "o" || tiles[column][row].state == "f" || tiles[column][row].state == "s") {
+            } else {
+                tiles[column][row].state = "e";
+                tiles[column][row].num = 0;
+            }
+        }
+    }
+}
+
 function mainHuntKill(row, column) {
     let anahori = true;
     while (anahori) {
